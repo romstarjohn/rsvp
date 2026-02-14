@@ -5,3 +5,4 @@ mysqlclient
 python-dotenv
 django-ninja
 django-cors-headers
+whitenoise>=6.0.0

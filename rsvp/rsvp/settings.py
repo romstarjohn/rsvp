@@ -49,6 +49,12 @@ print(allowed_hosts)
 ALLOWED_HOSTS = allowed_hosts
 CORS_ALLOWED_ORIGINS = CORS_HOSTS
 
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://api.danielleetstephen.com',
+    'http://api.danielleetstephen.com'
+]
+
 CORS_ALLOW_HEADERS = list(default_headers := [
     "accept",
     "accept-encoding",
@@ -78,6 +84,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
