@@ -19,7 +19,7 @@ services:
   web:
     build: .
     container_name: rsvp_web
-    command: gunicorn rsvp.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn rsvp.wsgi:application --bind 0.0.0.0:8000 --reload
     volumes:
       - .:/app
     ports:

@@ -25,6 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xdrx4lqlrr27x0g0^ndu^f#bc51u=en!w&6albct@h$4x)ti)0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 load_dotenv()
@@ -61,8 +64,6 @@ CORS_ALLOW_HEADERS = list(default_headers := [
 # Application definition
 
 INSTALLED_APPS = [
-    'emails',
-    'api',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -70,6 +71,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "corsheaders",
+    'emails',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -152,7 +155,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
