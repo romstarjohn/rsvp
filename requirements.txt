@@ -1,0 +1,7 @@
+
+Django>=4.2
+gunicorn
+mysqlclient
+python-dotenv
+django-ninja
+django-cors-headers
