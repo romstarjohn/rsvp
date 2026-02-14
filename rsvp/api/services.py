@@ -18,7 +18,7 @@ def enqueue_rsvp_emails(participation):
 
     # Notification to admin
     EmailQueue.objects.create(
-        to_email="admin@yourdomain.com",
+        to_email="mystirool@yahoo.fr",
         subject=f"Nouveau RSVP: {participation.first_name} {participation.last_name}",
         body=f"{participation.first_name} {participation.last_name} a soumis sa réponse : {participation.participation}",
         is_html=True,
