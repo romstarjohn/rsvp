@@ -1,3 +1,4 @@
 rsvp/var/*
 rsvp/staticfiles/*
 docker-compose.prod.yml
+rsvp/static
